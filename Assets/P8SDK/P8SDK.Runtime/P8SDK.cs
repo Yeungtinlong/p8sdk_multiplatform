@@ -1,4 +1,4 @@
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     /// <summary>
     /// P8SDK 暴露的接口
@@ -19,13 +19,13 @@ namespace P8SDKWeChat
         {
             P8SDKManager.Instance.Pay(option);
         }
-        
+
         /// <summary>
         /// SDK激活
         /// </summary>
-        public static void OnActiveFunc(GeneralCallbackOption option)
+        public static void OnActiveFunc()
         {
-            P8SDKManager.Instance.OnActiveFunc(option);
+            P8SDKManager.Instance.OnActiveFunc();
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace P8SDKWeChat
         {
             P8SDKManager.Instance.TutorialFinish(option);
         }
-        
+
         /// <summary>
         /// 关卡进出上报
         /// </summary>

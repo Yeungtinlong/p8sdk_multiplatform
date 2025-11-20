@@ -1,6 +1,6 @@
 using System;
 
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     public struct UpgradeRecordOption
     {
@@ -38,15 +38,5 @@ namespace P8SDKWeChat
         /// 安卓必须传，获取不了传空，ios不传
         /// </summary>
         public string oaid;
-
-        /// <summary>
-        /// 成功回调
-        /// </summary>
-        public Action success;
-
-        /// <summary>
-        /// 失败回调
-        /// </summary>
-        public Action<GeneralCallbackData> fail;
     }
 }

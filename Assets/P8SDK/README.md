@@ -1,10 +1,10 @@
-# P8SDK(微信小游戏) v2.0.49u1 接口文档
+# P8SDK (支持微信、抖音小游戏切换) 接口文档
 
 ## 必读
 
-* 导入插件后请点击顶部菜单 P8SDK/初始化P8SDK 完成初始化。
+* 导入插件后请点击顶部菜单 `P8SDK/初始化P8SDK>>[相应平台]`完成初始化。
 * 所有接口功能，可在 /P8SDK/Scene/P8SDK_Sample 场景中测试。
-* 所有接口均在P8SDKWeChat命名空间下的P8SDK类调用，均为静态方法。
+* 所有接口均在P8SDKSpace命名空间.P8SDK类调用，均为静态方法。
 
 ## 一、登录
 
@@ -46,11 +46,7 @@ P8SDK.Pay(new PayOption()
 ### 1、SDK激活
 
 ``` csharp
-P8SDK.OnActiveFunc(new GeneralCallbackOption()
-{
-    success = () => P8SDK.Log($"OnActiveFunc success"),
-    fail = res => P8SDK.Log($"OnActiveFunc fail: {JsonMapper.ToJson(res)}"),
-});
+P8SDK.OnActiveFunc();
 ```
 
 ### 2、登录行为上报，必接
@@ -64,9 +60,7 @@ P8SDK.PushLoginData(new PushLoginDataOption()
     roleid = "test_roleid",
     rolename = "test_rolename",
     username = "test_username",
-    vip = "9999",
-    success = () => P8SDK.Log($"PushLoginData success."),
-    fail = res => P8SDK.Log($"PushLoginData fail: {JsonMapper.ToJson(res)}"),
+    vip = "9999"
 });
 ```
 
@@ -83,9 +77,7 @@ P8SDK.UpgradeRecord(new UpgradeRecordOption()
     roleid = "test_roleid",
     rolename = "test_rolename",
     sid = "test_sid",
-    vip = "9999",
-    success = () => P8SDK.Log($"UpgradeRecord success."),
-    fail = res => P8SDK.Log($"UpgradeRecord fail: {JsonMapper.ToJson(res)}"),
+    vip = "9999"
 });
 ```
 
@@ -100,9 +92,7 @@ P8SDK.SignLog(new SignLogOption()
     level = "9999",
     roleid = "test_roleid",
     rolename = "test_rolename",
-    sid = "test_sid",
-    success = () => P8SDK.Log($"SignLog success."),
-    fail = res => P8SDK.Log($"SignLog fail: {JsonMapper.ToJson(res)}"),
+    sid = "test_sid"
 });
 ```
 
@@ -129,9 +119,7 @@ P8SDK.RewardedAdLog(new RewardedAdLogOption()
     ad_unit_ad = "test_ad_unit_ad",
     type = "test_type",
     status = "test_status",
-    ad_position = "test_ad_position",
-    success = () => P8SDK.Log("RewardedAdLog success."),
-    fail = (res) => P8SDK.Log($"RewardedAdLog fail {JsonMapper.ToJson(res)}"),
+    ad_position = "test_ad_position"
 });
 ```
 

@@ -1,5 +1,5 @@
 using System.Runtime.InteropServices;
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     internal static class WebGlInterface
     {

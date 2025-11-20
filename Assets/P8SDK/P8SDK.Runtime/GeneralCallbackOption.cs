@@ -1,8 +1,8 @@
 using System;
-using P8SDKWeChat;
+using P8SDKSpace;
 using UnityEngine.Scripting;
 
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     [Preserve]
     public class GeneralSuccessCallbackResult

@@ -1,6 +1,6 @@
 using System;
 
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     public struct RewardedAdLogOption
     {
@@ -48,15 +48,5 @@ namespace P8SDKWeChat
         /// 广告展示位置 选填
         /// </summary>
         public string ad_position;
-        
-        /// <summary>
-        /// 成功回调
-        /// </summary>
-        public Action success;
-        
-        /// <summary>
-        /// 失败回调
-        /// </summary>
-        public Action<GeneralCallbackData> fail;
     }
 }

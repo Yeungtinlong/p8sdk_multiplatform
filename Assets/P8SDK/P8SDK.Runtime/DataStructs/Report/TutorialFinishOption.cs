@@ -1,4 +1,4 @@
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     public struct TutorialFinishOption
     {

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using LitJson;
+using P8SDKSpace.LitJson;
 
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     internal static class WebGlUtils
     {

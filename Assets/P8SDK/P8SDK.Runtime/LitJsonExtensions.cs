@@ -1,6 +1,6 @@
-using LitJson;
+using P8SDKSpace.LitJson;
 
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     public static class LitJsonExtensions
     {

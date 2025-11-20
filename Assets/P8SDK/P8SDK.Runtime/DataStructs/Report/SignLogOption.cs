@@ -1,6 +1,4 @@
-using System;
-
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     public struct SignLogOption
     {
@@ -23,15 +21,5 @@ namespace P8SDKWeChat
         /// 角色等级
         /// </summary>
         public string level;
-
-        /// <summary>
-        /// 成功回调
-        /// </summary>
-        public Action success;
-
-        /// <summary>
-        /// 失败回调
-        /// </summary>
-        public Action<GeneralCallbackData> fail;
     }
 }

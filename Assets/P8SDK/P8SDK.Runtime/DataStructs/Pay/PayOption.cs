@@ -1,6 +1,7 @@
 using System;
+using P8SDKSpace.LitJson;
 
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     public enum PayResultType : int
     {
@@ -13,6 +14,16 @@ namespace P8SDKWeChat
         /// 支付失败/用户取消支付
         /// </summary>
         Fail = 1,
+        
+        /// <summary>
+        /// 没有配置当前的paytype
+        /// </summary>
+        NoConfig = -1,
+
+        /// <summary>
+        /// 请求p8sdk下单异常 
+        /// </summary>
+        RequestError = -2,
     }
     
     public struct PayResult
@@ -34,6 +45,7 @@ namespace P8SDKWeChat
         public string money; // 付款金额，单位：CNY
         public string level; //玩家等级
         public string test; //1为测试订单(测试回调地址);0为正式订单(正式回调地址);不传默认为0
+        public JsonData extraInfo; // 透传数据
         public Action<PayResult> callback;
     }
 }

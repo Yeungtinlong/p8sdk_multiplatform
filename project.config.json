@@ -1,39 +1,40 @@
 {
-  "appid": "wxddefb59053862d18",
-  "projectname": "kapibala",
-  "unity": {
-    "build": {
-      "webgl": "C:\\Projects\\UnityProjects-TT\\Kapibala\\build\\webgl_package-20241209_142451.zip",
-      "native": {
-        "il2cpp": "",
-        "apk": "",
-        "fullApk": ""
-      },
-      "instantGame": ""
+    "appid": "ttb0f8c6452fcdff5a07",
+    "projectname": "kapibala",
+    "unity": {
+        "build": {
+            "webgl": "D:\\Programming\\UnityProjects\\P8SDK-Fusion\\P8SDK-Fusion\\build\\fusion-tt\\webgl_package-20251120_114819.zip",
+            "native": {
+                "il2cpp": "",
+                "apk": "",
+                "fullApk": ""
+            },
+            "instantGame": ""
+        },
+        "publishType": "2",
+        "starkSdkVersion": "Without StarkSDK",
+        "unityToolsVersion": "4.0.4",
+        "unityEngineVersion": "2022.3.38f1",
+        "arch": "both"
     },
-    "publishType": "2",
-    "starkSdkVersion": "Without StarkSDK",
-    "unityToolsVersion": "4.0.4",
-    "unityEngineVersion": "2022.3.38f1",
-    "arch": "both"
-  },
-  "compileType": "game",
-  "libVersion": "3.7.2",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
-  "setting": {
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    }
-  },
-  "condition": {},
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
-  },
-  "simulatorPluginLibVersion": {}
+    "compileType": "game",
+    "libVersion": "3.7.2",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "setting": {
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "urlCheck": true
+    },
+    "condition": {},
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 2
+    },
+    "simulatorPluginLibVersion": {}
 }

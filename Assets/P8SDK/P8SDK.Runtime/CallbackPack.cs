@@ -1,6 +1,6 @@
-using LitJson;
+using P8SDKSpace.LitJson;
 
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     /// <summary>
     /// 用于处理从Native的回调的函数

@@ -1,6 +1,6 @@
 using System;
 
-namespace P8SDKWeChat
+namespace P8SDKSpace
 {
     public struct PushLoginDataOption
     {
@@ -38,15 +38,5 @@ namespace P8SDKWeChat
         /// 角色累计在线时长（单位分钟）
         /// </summary>
         public string onlinetime;
-
-        /// <summary>
-        /// 成功回调
-        /// </summary>
-        public Action success;
-
-        /// <summary>
-        /// 失败回调
-        /// </summary>
-        public Action<GeneralCallbackData> fail;
     }
 }

@@ -1,10 +1,23 @@
-# P8SDK (支持微信、抖音小游戏切换) 接口文档
+# P8SDK-Unity-MiniGame(多平台) v20251225 接口文档
 
 ## 必读
 
-* 导入插件后请点击顶部菜单 `P8SDK/初始化P8SDK>>[相应平台]`完成初始化。
-* 所有接口功能，可在 /P8SDK/Scene/P8SDK_Sample 场景中测试。
-* 所有接口均在P8SDKSpace命名空间.P8SDK类调用，均为静态方法。
+### 0. 目前仅支持`微信、抖音`小游戏
+
+### 1. 初始化工具
+
+* 导入插件后请点击顶部菜单 `P8SDK/[切换] >>> <相应平台>SDK环境`完成初始化
+
+### 2. 切换平台小工具
+
+* 如同款游戏需要发布多个小游戏平台，这里提供了SDK切换工具，可以使用顶部菜单 `P8SDK/[切换] >>> <相应平台>SDK环境`完成切换，其它平台的SDK文件目录将会备份到`<项目目录>/Platform@SDK`
+
+### 3. 使用说明
+
+* 所有接口功能，可在 `/P8SDK/Scene/P8SDK_Sample` 场景中测试
+* 所有接口均在静态类`P8SDKSpace.P8SDK`定义
+* 有些接口仅在特定小游戏平台可用，请留意说明
+* 如果发现无法识别P8SDKSpace命名空间，请在`Assets/P8SDK/P8SDK.Runtime/P8SDK.Runtime.asmdef`程序集定义文件中勾选`Auto Referenced`或在自行定义的程序集定义文件中引入`P8SDK.Runtime.asmdef`，并点击`Apply`
 
 ## 一、登录
 
@@ -203,4 +216,21 @@ P8SDK.CustomAdOnClose(new GeneralCompleteCallbackOption()
 {
     complete = () => P8SDK.Log($"CustomAdOnClose complete."),
 });
+
+```
+
+### 6、获取广告额外数据
+
+* 仅支持微信小游戏
+* 需在AdInit后使用
+* 获得的数据结构如 {"shareValue":0,"rewardValue":1,"userValueLevel":-1,"dramaUnionExp":"0"}
+
+``` csharp
+private void GetAdExtraButton_OnClick()
+{
+    P8SDK.GetAdExtraData(new GetAdExtraDataOption()
+    {
+        complete = (extraData) => P8SDK.Log($"GetAdExtraData complete {JsonMapper.ToJson(extraData)}."),
+    });
+}
 ```

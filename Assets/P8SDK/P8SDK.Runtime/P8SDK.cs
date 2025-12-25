@@ -152,6 +152,19 @@ namespace P8SDKSpace
         }
 
         /// <summary>
+        /// *注意* 仅在微信小游戏平台有效
+        /// 广告额外数据
+        /// </summary>
+        /// <param name="option">
+        /// 数据结构如：
+        /// {"shareValue":0,"rewardValue":1,"userValueLevel":-1,"dramaUnionExp":"0"}
+        /// </param>
+        public static void GetAdExtraData(GetAdExtraDataOption option)
+        {
+            P8SDKManager.Instance.GetAdExtraData(option);
+        }
+        
+        /// <summary>
         /// C#输出日志到Js控制台
         /// </summary>
         /// <param name="message"></param>

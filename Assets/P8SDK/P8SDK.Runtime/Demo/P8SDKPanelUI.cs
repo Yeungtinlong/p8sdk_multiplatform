@@ -1,4 +1,4 @@
-#define P8SDK_TT
+#define P8SDK_WX
 
 using P8SDKSpace.LitJson;
 using UnityEngine;
@@ -29,6 +29,8 @@ namespace P8SDKSpace.Demo.UI
         [SerializeField] private Button _customAdHideButton;
         [SerializeField] private Button _customAdOnCloseButton;
 
+        [SerializeField] private Button _getAdExtraDataButton;
+
         // [SerializeField] private Button _gotoMiniProgramButton;
 
         public void Awake()
@@ -54,9 +56,9 @@ namespace P8SDKSpace.Demo.UI
             _customAdHideButton.onClick.AddListener(CustomAdHideButton_OnClick);
             _customAdOnCloseButton.onClick.AddListener(CustomAdOnCloseButton_OnClick);
 
+            _getAdExtraDataButton.onClick.AddListener(GetAdExtraButton_OnClick);
             // _gotoMiniProgramButton.onClick.AddListener(GotoMiniProgramButton_OnClick);
         }
-
 
         private void TutorialFinishButton_OnClick()
         {
@@ -172,7 +174,7 @@ namespace P8SDKSpace.Demo.UI
                 rewardedAdInitOption = new RewardedAdInitOption()
                 {
 #if P8SDK_WX
-                    adUnitId = "adunit-646d6e72bf2e9d2f",
+                    adUnitId = "adunit-5a5ff34b172d3bc2",
 #elif P8SDK_TT
                     adUnitId = "3k88c0kn9i7aplp1hr",
 #endif
@@ -242,6 +244,14 @@ namespace P8SDKSpace.Demo.UI
             P8SDK.CustomAdOnClose(new GeneralCompleteCallbackOption()
             {
                 complete = () => P8SDK.Log($"CustomAdOnClose complete."),
+            });
+        }
+
+        private void GetAdExtraButton_OnClick()
+        {
+            P8SDK.GetAdExtraData(new GetAdExtraDataOption()
+            {
+                complete = (extraData) => P8SDK.Log($"GetAdExtraData complete {JsonMapper.ToJson(extraData)}."),
             });
         }
     }

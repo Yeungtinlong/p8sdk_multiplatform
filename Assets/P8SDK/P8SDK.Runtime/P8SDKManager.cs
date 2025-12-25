@@ -375,5 +375,15 @@ namespace P8SDKSpace
                 }
             }
         }
+        
+        internal void GetAdExtraData(GetAdExtraDataOption option)
+        {
+            WebGlUtils.CallNative("GetAdExtraData", null, Callback, option);
+            void Callback(object args, JsonData callbackData, string callbackType)
+            {
+                GetAdExtraDataOption o = (GetAdExtraDataOption)args;
+                o.complete?.Invoke(callbackData);
+            }
+        }
     }
 }

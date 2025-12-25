@@ -144,6 +144,12 @@
         LevelUpgrade: function (callObj) {
             P8LogSDK.levelUpGrade(callObj.callArgs[0]);
         },
+
+        GetAdExtraData: function (callObj) {
+            P8SDK.getAdExtraData().then((data) => {
+                globalThis.GameGlobal.P8Utils.SendCallback(callObj.callTarget, callObj.callbackId, data, "success");
+            });
+        },
     };
     if (globalThis.GameGlobal === undefined)
         globalThis.GameGlobal = {};

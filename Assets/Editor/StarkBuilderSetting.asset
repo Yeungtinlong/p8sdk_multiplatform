@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tag: 0
   wasmResourceUrl: http://
-  OutputDir: D:\Programming\UnityProjects\P8SDK-Fusion\P8SDK-Fusion\build\fusion-tt
+  OutputDir: D:\Programming\UnityProjects\P8SDK-Fusion\P8SDK-Fusion\tt-minigame
   useByteAudioAPI: 0
   wasmMemorySize: 128
   isWebGL2: 1
@@ -52,9 +52,9 @@ MonoBehaviour:
   _appId: ttba7fccc22575889507
   version: 
   autoVersion: 0
-  _webglPackagePath: D:\Programming\UnityProjects\P8SDK-Fusion\P8SDK-Fusion\build\fusion-tt\webgl_package-20251120_114819.zip
+  _webglPackagePath: D:\Programming\UnityProjects\P8SDK-Fusion\P8SDK-Fusion\tt-minigame\webgl_package-20251225_142627.zip
   _orientation: 0
-  _iOSPerformancePlus: 1
+  _iOSPerformancePlus: 0
   _menuButtonStyle: 0
   _publishType: 0
   publishDesc: 

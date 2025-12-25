@@ -65,6 +65,7 @@ namespace P8SDKSpace
                 {
                     argsArray.Add(arg);
                 }
+
                 jsonData["callArgs"] = argsArray;
             }
 
@@ -85,7 +86,7 @@ namespace P8SDKSpace
             _callbackDict.Add(callbackId, new CallbackPack(callbackHandler, args));
             WebGlInterface.UnityCallJsAsync(jsonData.ToJson());
         }
-        
+
         internal static void CallNative(string target, params JsonData[] callArgs)
         {
             string callbackId = GetCallbackId();

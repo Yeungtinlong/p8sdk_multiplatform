@@ -3,7 +3,7 @@
     "projectname": "kapibala",
     "unity": {
         "build": {
-            "webgl": "D:\\Programming\\UnityProjects\\P8SDK-Fusion\\P8SDK-Fusion\\build\\fusion-tt\\webgl_package-20251120_114819.zip",
+            "webgl": "D:\\Programming\\UnityProjects\\P8SDK-Fusion\\P8SDK-Fusion\\tt-minigame\\webgl_package-20251225_142627.zip",
             "native": {
                 "il2cpp": "",
                 "apk": "",
